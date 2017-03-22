@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+            android:label="搜索"
+            android:imeOptions="actionSearch"
+            android:icon="@mipmap/actionbar_search_icon"
+            android:hint="姓名" />
+    <!--imeOptions作用是键盘的回车键变成了搜索-->

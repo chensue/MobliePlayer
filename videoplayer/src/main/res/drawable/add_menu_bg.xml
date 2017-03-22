@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--dashWidth指的是边线的宽度 dashGap 指的是每条线之间的间距，（因为是边线是很多小横线组成的）-->
+    <stroke android:dashWidth="2dp" android:dashGap="2dp" android:width="2dp" android:color="#000000"/>
+    <corners android:radius="10dp" />
+    <solid android:color="#b0000000"/>
+</shape>

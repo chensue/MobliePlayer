@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item-->
+        <!--android:id="@+id/ab_search"-->
+        <!--android:orderInCategory="60"-->
+        <!--android:title="action_search"-->
+        <!--app:actionViewClass="android.support.v7.widget.SearchView"-->
+        <!--app:showAsAction="ifRoom"/>-->
+    <item
+        android:id="@+id/ab_search"
+        android:orderInCategory="80"
+        android:title="搜索"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/toolbar_add"
+        android:orderInCategory="90"
+        android:title="更多"
+        android:icon="@mipmap/add"
+        app:showAsAction="always"
+        />
+    <!--actionbar_add_icon-->
+    <!--//这句代码最关键，实现了主要的搜索视图功能-->
+</menu>

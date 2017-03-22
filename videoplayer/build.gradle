@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId 'com.example.czy.myapplication'
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    sourceSets {//目录指向配置
+        main {
+//            manifest.srcFile 'AndroidManifest.xml'//指定AndroidManifest文件
+//            java.srcDirs = ['src']//指定source目录
+//            resources.srcDirs = ['src']//指定source目录
+//            aidl.srcDirs = ['src']//指定source目录
+//            renderscript.srcDirs = ['src']//指定source目录
+//            res.srcDirs = ['res']//指定资源目录
+//            assets.srcDirs = ['assets']//指定assets目录
+            jniLibs.srcDirs = ['libs']//指定lib库目录
+        }
+//        debug.setRoot('build-types/debug')//指定debug模式的路径
+//        release.setRoot('build-types/release')//指定release模式的路径
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:design:23.3.0'
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/mid-core-sdk-3.7.2.jar')
+    compile files('libs/wup-1.0.0.E-SNAPSHOT.jar')
+    compile files('libs/Xg_sdk_v3.0_20170301_1733.jar')
+    compile project(':vitamio')
+    compile files('libs/android-async-http-master.jar')
+    compile files('libs/fastjson-1.2.4.jar')
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+}
